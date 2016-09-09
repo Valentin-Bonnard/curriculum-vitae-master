@@ -81,12 +81,10 @@ if('development' == app.get('env')){
 	app.use(errorHandler());
 }
 
+var port = process.env.PORT || 3000;
+app.listen(port);
 
-app.listen(process.env.PORT || 3000, function(){
-   var host = server.address().address;
-   var port = server.address().port;
-   console.log('Listening on http://%s:%s', host, port);
-});
+console.log("Listening on port " + port);
 
 
 
