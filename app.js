@@ -10,7 +10,7 @@ var errorHandler = require('errorhandler');
 var ejs = require('ejs');
 
 var app=express();
-var port = process.env.Port || 8080;
+
 /*------------------SMTP-----------------------------*/
 
 var smtpTransport = nodemailer.createTransport("SMTP",{
@@ -82,9 +82,10 @@ if('development' == app.get('env')){
 }
 
 
-var server = http.createServer(app);
-server.listen(port, function(){
-	console.log('Server listening on port : ' + port);
+app.listen(process.env.PORT || 3000, function(){
+   var host = server.address().address;
+   var port = server.address().port;
+   console.log('Listening on http://%s:%s', host, port);
 });
 
 
