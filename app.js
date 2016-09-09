@@ -25,8 +25,6 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname,'views'));
 
-
-app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(session({resave :true,
 				saveUninitialized : true, 
