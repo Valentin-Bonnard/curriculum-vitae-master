@@ -10,7 +10,7 @@ var errorHandler = require('errorhandler');
 var ejs = require('ejs');
 
 var app=express();
-
+var port = process.env.Port || 8080;
 /*------------------SMTP-----------------------------*/
 
 var smtpTransport = nodemailer.createTransport("SMTP",{
@@ -26,7 +26,6 @@ app.set('view engine','ejs');
 app.set('views', path.join(__dirname,'views'));
 
 
-app.set('port', process.env.Port || 5000);
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(session({resave :true,
@@ -86,8 +85,8 @@ if('development' == app.get('env')){
 
 
 var server = http.createServer(app);
-server.listen(app.get('port'), function(){
-	console.log('Server listening on port : ' + app.get('port'));
+server.listen(port, function(){
+	console.log('Server listening on port : ' + port);
 });
 
 
