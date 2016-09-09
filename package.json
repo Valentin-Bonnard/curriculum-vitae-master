@@ -1,0 +1,22 @@
+{
+	"name" : "cv",
+	"version" : "0.0.1",
+	"private" : true,
+	"scripts" : {
+		"start" : "node app.js"
+	},
+	"dependencies": {
+	"body-parser": "^1.5.2",
+    "errorhandler": "^1.1.1",
+    "express": "~4.5.1",
+    "express-session": "^1.7.2",
+    "jade": "^1.5.0",
+    "morgan": "^1.2.2",
+    "nodemailer" : "~0.7.1",
+    "ejs" : "2.3.4",
+    "serve-favicon": "^2.0.1"
+	},
+	"engines": {
+    "node": "4.1.1"
+  }
+}

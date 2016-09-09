@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>Bonnard-Valentin | Developpeur C#</title>
+	<script src="js/jquery.min.js"> </script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/skillbar.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var from,name,subject,text;
+			$("#send_email").click(function(){		
+				name=$("#name").val();
+				subject=$("#subject").val();
+				text=$("#content").val();
+				$("#message").text("Sending E-mail...Please wait");
+				$.get("http://localhost:3000/send",{name:name,subject:subject,text:text},function(data){
+					if(data=="sent")
+					{
+						$("#message").empty().html("<p>Email is been sent at "+name+" . Please check inbox !</p>");
+					}
+
+				});
+			});
+		});
+	</script>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="top-top" class="headerbg">
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a class="scroll" href="#about">A PROPOS</a></li>
+						<li><a class="scroll" href="#skills">CAPACITE</a></li>
+						<li><a class="scroll" href="#port">PORTFOLIO</a></li>
+						<li><a class="scroll" href="#contact">CONTACT</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="container">
+				<div class="banner-info">
+					<div class="bannerlogo">
+						<img src="images/logo.ico">
+					</div>
+					<div class="bannerhead">
+						<h2><span>Valentin Bonnard</span></h2>
+						<h3>Développeur c#</h3>
+						<p></p>
+						<a class="downarrow scroll" href="#about"><span> </span></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div id="about" class="about">
+			<div class="container">
+				<div class="header-section text-center">
+					<h2><span> </span>A PROPOS<span> </span></h2>
+				</div>
+				<span><p>Jeune développeur logiciel ayant un bac + 3 ainsi qu'une expérience dans le développement d'un jeu mobile, suite au stage de fin de formation ainsi que dans la réalisation de projet personnel.</p></span>
+
+					<div class="years">	 
+						<h4><b>2009 - 2010</b></h4>
+						<span><h4>Obtention Baccalauréat</h4></span>
+						<p><i>Baccalauréat Sciences Economiques et Sociales option(Sciences Politiques)
+							au Lycée européen de Villers-Cotterêts (Aisne, Picardie)</i></p>
+						</div> 
+
+						<div class="years">	 		
+							<h4><b>2013</b></h4>
+							<span><h4>Licence</h4></span>
+							<p><i>Facultés Droit et lettres(cursus Droit)</i></p>
+						</div> 
+
+						<div class="years">	 	
+							<h4><b>2016</b></h4>
+							<span><h4>Formation Développeur Logiciel</h4></span>
+							<div class="labs">
+								<p><i>
+									Diplôme bac + 3
+								</i></p>
+								</div>
+								<div class="years">	 	
+							<h4><b>Septembre-Novembre 2015</b></h4>
+							<span><h4>Stage </h4></span>
+							<div class="labs">
+								<p><i>
+									Stage effectué au sein d'une entreprise d'indépendant de développement de jeu
+								</i></p>
+									</div>		
+									<br></br>					
+									<a href="images/Cv_Valentin.pdf" target="_blank" class="myButton">Telecharger CV</a>
+								</div>
+							</div>
+							<a class="arrow scroll" href="#skills"><span> </span></a>
+						</div>
+					</div>
+
+					<div id="skills" class="skills">
+						<div class="container">
+							<div class="skills-grids">
+								<div class="skill-section text-center">
+									<h2><span> </span>COMPETENCES ET LANGUES<span> </span></h2>
+								</div>
+								<div class="services_grids">
+									<div id="canvas">
+										<div class="skill-grids text-center">
+											<div class="col-md-3">	
+												<div class="skill-grid">
+													<div class="circle" id="circles-1"></div>									
+													<h3>JAVASCRIPT</h3>	
+												</div>								  
+											</div>
+											<div class="col-md-3">	
+												<div class="skill-grid">
+													<div class="circle" id="circles-2"></div>									
+													<h3>HTML5</h3>	
+												</div>								  
+											</div>
+											<div class="col-md-3">	
+												<div class="skill-grid">
+													<div class="circle" id="circles-3"></div>									
+													<h3>CSS3</h3>	
+												</div>								  
+											</div>
+											
+											<div class="col-md-3">	
+												<div class="skill-grid">
+													<div class="circle" id="circles-4"></div>									
+													<h3>C#</h3>	
+												</div>								  
+											</div>
+											<div class="col-md-3">	
+												<div class="skill-grid">
+													<div class="circle" id="circles-5"></div>									
+													<h3>MYSQL</h3>	
+												</div>								  
+											</div>
+											<div class="col-md-3">	
+												<div class="skill-grid">
+													<div class="circle" id="circles-6"></div>									
+													<h3>NOSQL/MongoDB</h3>	
+												</div>								  
+											</div>
+											<div class="col-md-3">	
+												<div class="skill-grid">
+													<div class="circle" id="circles-7"></div>									
+													<h3>Anglais</h3>	
+												</div>								  
+											</div>
+
+											<div class="container">
+												<div class="skills-grids">
+													<div class="skill-section text-center">
+														<h2><span> </span>Outils/Framework<span> </span></h2> 
+														<div class="skillbar clearfix " data-percent="50%">
+															<div class="skillbar-title" style="background: #ff8000;"><span>VStudio</span></div>
+															<div class="skillbar-bar" style="background: #ff8000;"></div>
+															<div class="skill-bar-percent">50%</div>
+														</div> 
+
+														<div class="skillbar clearfix " data-percent="75%">
+															<div class="skillbar-title" style="background: #80ff00;"><span>Notepad++</span></div>
+															<div class="skillbar-bar" style="background: #80ff00;"></div>
+															<div class="skill-bar-percent">75%</div>
+														</div> 
+														
+														<div class="skillbar clearfix " data-percent="55%">
+															<div class="skillbar-title" style="background: #ff8000;"><span>dotNet/Asp.Net</span></div>
+															<div class="skillbar-bar" style="background: #ff8000;"></div>
+															<div class="skill-bar-percent">55%</div>
+														</div> 
+
+														<div class="skillbar clearfix " data-percent="50%">
+															<div class="skillbar-title" style="background: #80ff00;"><span>Jquery</span></div>
+															<div class="skillbar-bar" style="background: #80ff00;"></div>
+															<div class="skill-bar-percent">50%</div>
+														</div> 
+														<div class="skillbar clearfix " data-percent="40%">
+															<div class="skillbar-title" style="background: #ff8000;"><span>BootStrap/Prestashop</span></div>
+															<div class="skillbar-bar" style="background: #ff8000;"></div>
+															<div class="skill-bar-percent">40%</div>
+														</div> 
+													</div>
+												</div>
+											</div>
+
+											<div class="clearfix"> </div>
+										</div>
+									</div>
+								</div>
+								
+								<script type="text/javascript" src="js/circles.js"></script>
+								<script>
+									var colors = [
+									['#181115', '#30222A'], ['#181115', '#80ff00'], ['#181115', '#ffff00'], ['#181115', '#ff8000'],['#181115', '#ff0000']
+									];
+									var i = 1;
+									var child1 = document.getElementById('circles-' + i);
+									var child2 = document.getElementById('circles-' + (i + 1));
+									var child3 = document.getElementById('circles-' + (i + 2));
+									var child4 = document.getElementById('circles-' + (i + 3));
+									var child5 = document.getElementById('circles-' + (i + 4));
+									var child6 = document.getElementById('circles-' + (i + 5));
+									var child7 = document.getElementById('circles-' + (i + 6));
+
+									percentage = null;
+
+									Circles.create({
+										id:         child1.id,
+										percentage: 55,
+										radius:     80,
+										width:      15,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[2]
+									});
+
+									Circles.create({
+										id:         child2.id,
+										percentage: 60,
+										radius:     80,
+										width:      15,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[1]
+									});
+
+									Circles.create({
+										id:         child3.id,
+										percentage: 60,
+										radius:     80,
+										width:      15,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[1]
+									});
+
+									Circles.create({
+										id:         child4.id,
+										percentage: 65,
+										radius:     80,
+										width:      15,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[1]
+									});
+
+									Circles.create({
+										id:         child5.id,
+										percentage: 45,
+										radius:     80,
+										width:      15,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[2]
+									});
+									Circles.create({
+										id:         child6.id,
+										percentage: 40,
+										radius:     80,
+										width:      15,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[3]
+									});
+									Circles.create({
+										id:         child7.id,
+										percentage: 75,
+										radius:     80,
+										width:      15,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[1]
+									});
+								</script>
+							</div>
+							<div class="clear"> </div>
+						</div>
+						<a class="down scroll" href="#port"><span> </span></a>
+					</div>
+
+					<div id="port" class="Portfolio">
+						<div class="Portfolio-section text-center">
+							<h2><span> </span>PORTFOLIO<span> </span></h2>
+						</div>
+						<div class="container">
+							<div class="portfolio-grids">
+								<div class="portfolio-grid col-md-4">
+									<a href="https://github.com/Valentin-Bonnard/SGAMES" target ="_blank"><img src="images/monitr1.jpg"></a>
+									<p>Projet effectuer lors de la formation, Java/Javafx/mysql, analyse la compatibilté matérielle pour jeux/logicielp>
+										<a class="rightarrow" href="https://github.com/Valentin-Bonnard/SGAMES" target ="_blank"><span> </span></a>
+									</div>
+									<div class="portfolio-grid col-md-4">
+										<a href="https://github.com/Valentin-Bonnard/curriculum-vitae" target ="_blank"><img src="images/monitr2.jpg"></a>
+										<p>Cv sous forme de site internet se reposant sur l'outil NodeJs (petit serveur html). Vous pouvez voir les sources du projet en cliquant sur la flèche ci-dessous.
+											
+										</p>
+											<a class="rightarrow" href="https://github.com/Valentin-Bonnard/curriculum-vitae" target ="_blank"><span> </span></a>
+										</div>
+										
+										<div class="portfolio-grid col-md-4">
+									<a href="https://github.com/Valentin-Bonnard/serveur" target ="_blank"><img src="images/monitr3.jpg"></a>
+									<p>Serveur pouvant supporter un jeu (navigteur) 
+									implémentation de connection en local Nosql, Facebook, micro-paiement.</p>
+										<a class="rightarrow" href="https://github.com/Valentin-Bonnard/serveur" target ="_blank"><span> </span></a>
+									</div>
+									<br/>
+									<div class="portfolio-grid col-md-4">
+									<a href="https://github.com/Valentin-Bonnard/Soval" target ="_blank"><img src="images/monitr4.jpg"></a>
+									<p>Futur Site personel (Asp.net Mvc 4 razor engine /c# ) + jeu en javascript (casse brique ( Doctor who)) dans la page erreur. </p>
+										<a class="rightarrow" href="https://github.com/Valentin-Bonnard/Soval" target ="_blank"><span> </span></a>
+									</div>
+									
+									<div class="portfolio-grid col-md-4">
+									<a href="#" target ="_blank"><img src="images/monitr3.png"></a>
+									<p>Projet jeu (bundle ( morpion, pierre feuille ciseau, mastermind) en c#  ( en cours ) </p>
+										<a class="rightarrow" href="#" target ="_blank"><span> </span></a>
+									</div>
+									
+									<div class="portfolio-grid col-md-4">
+									<a href="#" target ="_blank"><img src="images/monitr3.png"></a>
+									<p>Site asp.net/linq pour film, etc ( en cours d'élaboration)</p>
+										<a class="rightarrow" href="#" target ="_blank"><span> </span></a>
+									</div>
+
+
+
+											<div class="clear"> </div>
+										</div>
+										<a class="portdown scroll" href="#contact"><span> </span></a>	  
+									</div>
+								</div>
+							</div>
+							<div  id="contact" class="footer">
+								<div class="container">
+									<div class="contact-section text-center">
+										<h2><span> </span>ME CONTACTER<span> </span></h2>
+									</div>
+									<div class="row"> 
+										<div class="col-md-6">
+											<div class="footer-left">
+												<div class="social-icons">
+													<a href="#"><img src="images/in.png"></a>
+													<a href="https://twitter.com/deathshot3" target ="_blank"><img src="images/twt.png"></a>
+													<a href="https://www.facebook.com/GIT.valentin" target ="_blank"><img src="images/fb.png"></a>
+												</div>
+												<p>Vous pouvez me contacter via mon compte Facebook, Twitter et linkedin.<br />      
+													Si vous le souhaiter, vous pouvez m'envoyez un email directement via le formulaire à coté.<br /> 
+													Ce site est crée en HTML5, Javascript, Bootstrap, CSS3.
+												</p>
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="footer-right">
+												<div class="form">
+													<form >
+														<input id="name" type="text" class="text" name="name" value="Votre email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Votre email';}">
+														<input id="subject" type="text" class="text" name="Object" value="Object" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Object';}">
+														<textarea id="content" name="message" rows="2" cols="70" onfocus="this.value='';" onblur="if(this.value == '') this.value='Votre message';" >Votre Message</textarea>
+														<div class="clear"> </div>
+														<div class="hp">
+														<label>Si vous êtes un humain, laissez ce champ vide</label> 
+														<input type="text" id="comment">
+														</div>
+														<input id="send_email" name="submit" type="submit" value="ENVOYER"> 
+														<span id="message"></span>
+													</form>
+												</div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+								<a class="up scroll" href="#top-top"><span> </span></a>  
+							</div>
+						</body>
+						</html>
+
